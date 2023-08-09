@@ -1,7 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react'
+import TaskList from './TaskList.jsx';
+import '../../src/index.css'
 
-export default class App extends Component {
-  render() {
-    return <h1>React App Working</h1>;
-  }
+const app = () => {
+
+  return (
+    <div>
+      <TaskList />
+    </div>
+    
+  )
 }
+
+export default app

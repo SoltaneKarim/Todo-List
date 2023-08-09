@@ -6,12 +6,16 @@ module.exports = (db) => {
   }
   // Create a table
   return db.queryAsync(`
-    CREATE TABLE IF NOT EXISTS tableName (
+    CREATE TABLE IF NOT EXISTS tasks (
       id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-      column1 VARCHAR(255),
-      column2 INT NOT NULL DEFAULT 0
-    );`)
-    .error(err => {
-      console.log(err);
-    });
-};
+      task VARCHAR(255),
+      done BOOLEAN NOT NULL DEFAULT false
+
+      );`)
+      .error(err => {
+        console.log(err);
+      });
+    };
+    
+    
+    // done INT NOT NULL DEFAULT 0
